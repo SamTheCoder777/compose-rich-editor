@@ -70,6 +70,10 @@ public class RichTextState internal constructor(
         private set
 
     /**
+     * True change of the string including list changes
+     */
+    public var trueString: String by mutableStateOf("")
+    /**
      * The selection of the rich text.
      */
     public var selection: TextRange

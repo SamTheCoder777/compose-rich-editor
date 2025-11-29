@@ -237,6 +237,7 @@ public fun BasicRichTextEditor(
                 if (it.text.length > maxLength) return@BasicTextField
 
                 state.onTextFieldValueChange(it)
+                state.trueString = state.textFieldValue.text
             },
             modifier = modifier
                 .onPreviewKeyEvent { event ->

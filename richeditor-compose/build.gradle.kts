@@ -5,11 +5,11 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.compose.compiler)
+    id("org.jetbrains.kotlin.plugin.compose") version "2.2.0"
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.androidLibrary)
-    alias(libs.plugins.bcv)
-    id("module.publication")
+    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.18.1"
+    //id("module.publication")
 }
 
 kotlin {
@@ -52,11 +52,11 @@ kotlin {
         implementation(compose.material3)
 
         // HTML parsing library
-        implementation(libs.ksoup.html)
-        implementation(libs.ksoup.entities)
+        implementation("com.mohamedrejeb.ksoup:ksoup-html:0.6.0")
+        implementation("com.mohamedrejeb.ksoup:ksoup-entities:0.6.0")
 
         // Markdown parsing library
-        implementation(libs.jetbrains.markdown)
+        implementation("org.jetbrains:markdown:0.7.3")
     }
 
     sourceSets.commonTest.dependencies {
