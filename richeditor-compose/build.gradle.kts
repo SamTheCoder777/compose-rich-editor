@@ -57,6 +57,9 @@ kotlin {
 
         // Markdown parsing library
         implementation("org.jetbrains:markdown:0.7.3")
+
+        // kotlin json
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
     }
 
     sourceSets.commonTest.dependencies {

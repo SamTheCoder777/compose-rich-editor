@@ -38,6 +38,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.serialization.Serializable
 import kotlin.math.absoluteValue
 import kotlin.math.max
 import kotlin.reflect.KClass
@@ -49,6 +50,7 @@ public fun rememberRichTextState(): RichTextState {
     }
 }
 
+@Serializable
 @OptIn(ExperimentalRichTextApi::class)
 public class RichTextState internal constructor(
     initialRichParagraphList: List<RichParagraph>,
